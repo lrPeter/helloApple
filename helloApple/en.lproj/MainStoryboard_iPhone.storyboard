@@ -1,26 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Harbour View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="harbourViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-Zj-KIZ">
+                                <items>
+                                    <navigationItem title="Title" id="J9k-Fn-5i3"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KbZ-9l-VdV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="oY1-IT-Fi8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="y1r-q5-oPg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Pem-fR-hba"/>
+                                </constraints>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6eB-Zj-KIZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="25" id="0xy-BC-Drr"/>
+                            <constraint firstItem="6eB-Zj-KIZ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="9qD-zO-CHI"/>
+                            <constraint firstItem="KbZ-9l-VdV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="111" id="Aws-dQ-cZb"/>
+                            <constraint firstItem="y1r-q5-oPg" firstAttribute="centerY" secondItem="KbZ-9l-VdV" secondAttribute="centerY" type="default" id="ExW-2w-waZ"/>
+                            <constraint firstAttribute="trailing" secondItem="y1r-q5-oPg" secondAttribute="trailing" constant="45" id="caa-gQ-wYX"/>
+                            <constraint firstItem="6eB-Zj-KIZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="u1Q-mS-CiX"/>
+                            <constraint firstItem="KbZ-9l-VdV" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="27" id="yeJ-WD-G8G"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="harbourViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/harbourViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
